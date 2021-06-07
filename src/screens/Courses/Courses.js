@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-export const Contact = ({ navigation }) => {
+export const Courses = ({ navigation }) => {
   return (
     <View>
-      <Text>Contact Screen</Text>
+      <Text>Courses Screen</Text>
       <Button title="About" onPress={() => navigation.navigate('about')} />
     </View>
   );

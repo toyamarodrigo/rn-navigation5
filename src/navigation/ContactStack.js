@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Contact } from '../screens';
+import { Contact, Courses } from '../screens';
 
 const Stack = createStackNavigator();
 
@@ -11,6 +11,11 @@ export default function ContactStack() {
         name="contact"
         component={Contact}
         options={{ title: 'Contact' }}
+      />
+      <Stack.Screen
+        name="courses"
+        component={Courses}
+        options={{ title: 'Courses' }}
       />
     </Stack.Navigator>
   );

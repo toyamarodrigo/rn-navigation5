@@ -1,24 +1,40 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Contact, About } from '../screens';
-import HomeStack from './HomeStack';
-import ContactStack from './ContactStack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import ContactStack from '../navigation/ContactStack';
+import HomeStack from '../navigation/HomeStack';
 
-const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
 export default function Navigation() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen
+    <Drawer.Navigator>
+      <Drawer.Screen
         name="home"
         component={HomeStack}
         options={{ title: 'Home' }}
       />
-      <Tab.Screen
+      <Drawer.Screen
         name="contact"
         component={ContactStack}
         options={{ title: 'Contact' }}
       />
-    </Tab.Navigator>
+    </Drawer.Navigator>
   );
 }
+
+// export default function Navigation() {
+//   return (
+//     <Tab.Navigator>
+//       <Tab.Screen
+//         name="home"
+//         component={HomeStack}
+//         options={{ title: 'Home' }}
+//       />
+//       <Tab.Screen
+//         name="contact"
+//         component={ContactStack}
+//         options={{ title: 'Contact' }}
+//       />
+//     </Tab.Navigator>
+//   );
+// }
